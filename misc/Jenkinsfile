@@ -11,6 +11,10 @@ node {
        sh 'npm test'
      }
    }
+    stage('Initialize'){
+        def dockerHome = tool 'docker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
    stage('docker build/push') {
      docker.withRegistry('https://index.docker.io/v1/', '') {
        def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
