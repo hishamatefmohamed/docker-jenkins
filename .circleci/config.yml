@@ -26,7 +26,7 @@ jobs:
      steps:
       - checkout
       - run:
-          name: "Say bye"
+          name: "Say my name"
         
           command: "echo $MY_ENV_VAR"
 
