@@ -27,9 +27,8 @@ jobs:
       - checkout
       - run:
           name: "Say bye"
-          environment:
-           name='hisham'
-          command: "echo $name"
+        
+          command: "echo $MY_ENV_VAR"
 
   say-bye:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
