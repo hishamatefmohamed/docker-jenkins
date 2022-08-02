@@ -41,7 +41,7 @@ jobs:
       - checkout
       - run:
           name: "Say bye"
-          command: "echo hi hisham"
+          command: "echo bye hisham"
 
 
 # Invoke jobs via workflows
