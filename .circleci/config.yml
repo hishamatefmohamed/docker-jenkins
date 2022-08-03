@@ -40,8 +40,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say bye"
-          #command: "echo bye hisham2"
+          name : "Say bye"
+          command : "echo bye hisham2"
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
