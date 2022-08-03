@@ -22,7 +22,7 @@ jobs:
       - persist_to_workspace:
           root: ~/
           paths:
-            - output.txt
+            - ~/output.txt
 
   say-my_name:
      docker:
