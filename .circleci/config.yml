@@ -29,9 +29,11 @@ jobs:
       - image: cimg/base:stable
      steps:
       - checkout
-      - run: | 
+      - run:
           name: "Say my name"
+      - run:
           "echo $MY_ENV_VAR"
+      - run:
           pwd
 
   say-bye:
