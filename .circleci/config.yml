@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world" > ~/output.txt
-            pwd
+      - run:   pwd
       - persist_to_workspace:
           root: ~/
           paths:
@@ -47,10 +47,10 @@ jobs:
           #command: "echo bye hisham2"
       - attach_workspace:
           at: ~/
-      - run:
-        pwd
-        echo "bye hisham"
-        cat ~/output.txt
+
+      - run:  pwd
+      - run:  echo "bye hisham"
+      - run: cat ~/output.txt
 
 
 # Invoke jobs via workflows
