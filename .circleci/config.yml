@@ -17,7 +17,6 @@ jobs:
     steps:
       - checkout
       - run:  echo "hello world" > ~/output.txt
-      - run: pwd
       - persist_to_workspace:
           root: ~/
           paths:
@@ -29,8 +28,7 @@ jobs:
      steps:
       - checkout
       - run: echo $MY_ENV_VAR
-      - run:
-          pwd
+
 
   say-bye:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
@@ -46,9 +44,6 @@ jobs:
           #command: "echo bye hisham2"
       - attach_workspace:
           at: ~/
-
-      - run:  pwd
-      - run:  echo "bye hisham"
       - run: cat ~/output.txt
 
 
