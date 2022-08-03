@@ -16,10 +16,8 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          echo "hello world" > ~/output.txt
-       - run:
-         pwd
+      - run:  echo "hello world" > ~/output.txt
+      - run: pwd
       - persist_to_workspace:
           root: ~/
           paths:
@@ -30,10 +28,7 @@ jobs:
       - image: cimg/base:stable
      steps:
       - checkout
-      - run:
-          name: "Say my name"
-      - run:
-          "echo $MY_ENV_VAR"
+      - run: echo $MY_ENV_VAR
       - run:
           pwd
 
