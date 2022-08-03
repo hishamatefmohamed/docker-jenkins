@@ -43,10 +43,12 @@ jobs:
       - checkout
       - run:
           name: "Say bye"
-          command: "echo bye hisham2"
+          #command: "echo bye hisham2"
       - attach_workspace:
           at: ~/
-      - run: cat ~/output.txt
+      - run:
+        echo "bye hisham"
+        cat ~/output.txt
 
 
 # Invoke jobs via workflows
