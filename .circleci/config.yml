@@ -18,7 +18,11 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: "echo "Hello, World!" >>output.txt"
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - output.txt
 
   say-my_name:
      docker:
@@ -42,6 +46,9 @@ jobs:
       - run:
           name: "Say bye"
           command: "echo bye hisham2"
+      - attach_workspace:
+          at: ~/
+      - run: cat ~/output.txt
 
 
 # Invoke jobs via workflows
