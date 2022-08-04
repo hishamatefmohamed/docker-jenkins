@@ -65,7 +65,7 @@ jobs:
       - run: cat /home/circleci/project/output.txt
       - run:
           name: Upload Failed Tests
-          command : "Echo job failed"
+          command : "echo job failed"
           when: on_fail
       
 
