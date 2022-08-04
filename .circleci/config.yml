@@ -46,8 +46,10 @@ jobs:
           command : "echo bye hisham2"
       - attach_workspace:
           at: ~/
-      - run: cat /home/circleci/project/output.txt
       - run: pwd
+      - run: ls
+      - run: cat /home/circleci/project/output.txt
+      
 
 
 # Invoke jobs via workflows
