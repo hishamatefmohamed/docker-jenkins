@@ -46,7 +46,7 @@ jobs:
           command : "echo bye hisham2"
       - attach_workspace:
           at: ~/
-      - run: cat ~/output.txt
+      - run: cat /home/circleci/projec/toutput.txt
       - run: pwd
 
 
